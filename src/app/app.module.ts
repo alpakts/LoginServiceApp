@@ -24,7 +24,7 @@ import { NgxSpinnerModule } from "ngx-spinner";
     FormsModule,
     ReactiveFormsModule,
     ToastrModule.forRoot({
-      positionClass:"toast-bottom-right"
+      positionClass:"toast-top-right"
     }),
     NgxSpinnerModule
     

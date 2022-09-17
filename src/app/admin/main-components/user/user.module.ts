@@ -7,6 +7,10 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatButtonModule} from '@angular/material/button';
 import { AddUserComponent } from './add-user/add-user.component';
+
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatSelectModule} from '@angular/material/select';
+import {MatTableModule} from '@angular/material/table';
 @NgModule({
   declarations: [
     UserComponent,
@@ -18,6 +22,9 @@ import { AddUserComponent } from './add-user/add-user.component';
     MatFormFieldModule,
     MatButtonModule,
     MatSidenavModule,
+    MatPaginatorModule,
+    MatSelectModule,
+    MatTableModule,
     RouterModule.forChild([{path:"",component:UserComponent},])
   ],exports:[UserComponent,AddUserComponent]
 })

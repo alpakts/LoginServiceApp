@@ -1,26 +1,27 @@
 <mat-form-field appearance="fill">
-    <mat-label>Input</mat-label>
-    <input matInput>
+    <mat-label >Ad</mat-label>
+    <input type="text" matInput required #textName>
   </mat-form-field>
   <mat-form-field appearance="fill">
-    <mat-label>Input</mat-label>
-    <input matInput>
+    <mat-label>Soyad</mat-label>
+    <input type="text" matInput required #textLast>
   </mat-form-field>
   <mat-form-field appearance="fill">
-    <mat-label>Input</mat-label>
-    <input matInput>
+    <mat-label>Email</mat-label>
+    <input type="text" matInput required #textEmail>
   </mat-form-field>
   <mat-form-field appearance="fill">
-    <mat-label>Input</mat-label>
-    <input matInput>
+    <mat-label >Şifre</mat-label >
+    <input type="text" matInput required #textPass>
   </mat-form-field>
-  <mat-form-field appearance="fill">
-    <mat-label>Input</mat-label>
-    <input matInput>
-  </mat-form-field>
-  <mat-form-field appearance="fill">
-    <mat-label>Input</mat-label>
-    <input matInput>
-  </mat-form-field>
-  <button mat-button color="primary">Kullanıcı Ekle</button>
-  
+<mat-form-field appearance="fill">
+  <mat-label>Kullanıcı Rolü</mat-label >
+  <mat-select #textRole >
+    <mat-option   aria-required="true" *ngFor="let role of Role" [value]="role.value">
+      {{role.viewValue}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+
+  <button (click)="Create(textEmail,textLast,textName,textPass,textRole)" class="addbutton" mat-raised-button color="primary">Kullanıcı Ekle</button>
