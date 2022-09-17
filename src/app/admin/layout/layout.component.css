@@ -1,0 +1,9 @@
+.sidebar-container {
+    border: solid 1px black;
+    height: 600px;
+    width: 98%;
+    background: #eee;
+  }
+.sidebar-left{
+    width: 10%;
+  }

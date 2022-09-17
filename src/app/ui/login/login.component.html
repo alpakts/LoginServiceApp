@@ -1,0 +1,37 @@
+<body>
+    
+
+<div class="container">
+	<div class="screen">
+		<div class="screen__content">
+			<form class="login" [formGroup]="loginForm">
+                <div class="login__field">
+					<img src="https://www.zenuyku.com/wp-content/uploads/2021/11/1.png"   width="200px" height="100px" alt="" role="link">
+				</div>
+				<div class="login__field">
+					<i class="login__icon fas fa-user"></i>
+					<input id="floatingInput" type="text" class="login__input form-control" formControlName="email" placeholder="Email">
+				</div>
+				<div class="login__field">
+					<i class="login__icon fas fa-lock"></i>
+					<input id="floatingInput" type="password"  class="login__input form-control" formControlName="password" placeholder="Şifre">
+				</div>
+				<button class="button login__submit" (click)="login()">
+					<span class="button__text">Giriş Yap</span>
+					<i class="button__icon fas fa-chevron-right"></i>
+				</button>				
+			</form>
+            <div class="social-login">
+				<h3 s>Hala Kayıtlı değilmisin <Span><a href="login/register">Kayıt Ol</a></Span></h3>
+				
+			</div>
+		
+		</div>
+		<div class="screen__background">
+			<span class="screen__background__shape screen__background__shape4"></span>
+			<span class="screen__background__shape screen__background__shape3"></span>		
+			<span class="screen__background__shape screen__background__shape2"></span>
+			<span class="screen__background__shape screen__background__shape1"></span>
+		</div>		
+	</div>
+</div></body>
