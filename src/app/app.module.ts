@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule ,CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {ToastrModule} from "ngx-toastr";
 import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http'
@@ -8,7 +8,7 @@ import { UiModule } from './ui/ui.module';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations"
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdminModule } from './admin/admin.module';
-
+import { NgxSpinnerModule } from "ngx-spinner";
 @NgModule({
   declarations: [
     AppComponent
@@ -25,9 +25,11 @@ import { AdminModule } from './admin/admin.module';
     ReactiveFormsModule,
     ToastrModule.forRoot({
       positionClass:"toast-bottom-right"
-    })
+    }),
+    NgxSpinnerModule
     
   ],
+  schemas:[CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
   bootstrap: [AppComponent],
   
