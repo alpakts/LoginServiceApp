@@ -4,8 +4,6 @@ import { LayoutModule } from './layout/layout.module';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MainComponentsModule } from './main-components/main-components.module';
 import { DialogComponent } from './dialog/dialog.component';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
-import { AuthInterceptor } from '../interceptors/auth.interceptor';
 
 
 
@@ -21,6 +19,6 @@ import { AuthInterceptor } from '../interceptors/auth.interceptor';
   declarations: [
     DialogComponent
   ],
-  providers: [{provide:HTTP_INTERCEPTORS, useClass:AuthInterceptor, multi:true}],
+  
 })
 export class AdminModule { }

@@ -6,7 +6,6 @@ import { ToastrModule } from 'ngx-toastr';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms"
 import { RouterModule } from '@angular/router';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
-import { AuthInterceptor } from '../interceptors/auth.interceptor';
 
 
 
@@ -24,6 +23,6 @@ import { AuthInterceptor } from '../interceptors/auth.interceptor';
   
     
   ],
-  providers: [{provide:HTTP_INTERCEPTORS, useClass:AuthInterceptor, multi:true}],
+  
 })
 export class UiModule { }

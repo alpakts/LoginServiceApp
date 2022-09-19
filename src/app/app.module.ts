@@ -9,7 +9,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations"
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdminModule } from './admin/admin.module';
 import { NgxSpinnerModule } from "ngx-spinner";
-import { AuthInterceptor } from './interceptors/auth.interceptor';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -31,7 +31,7 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
     
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA],
-  providers: [{provide:HTTP_INTERCEPTORS, useClass:AuthInterceptor, multi:true}],
+  providers:[],
   bootstrap: [AppComponent],
   
 })
