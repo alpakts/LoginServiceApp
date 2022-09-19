@@ -34,7 +34,7 @@ export class UserComponent implements OnInit ,AfterViewInit
     this.GetUserList();
   }
   GetUserList<UserForListModel>(){
-    this.userService.getAll<UserForListModel>("http://zenuykuapi.somee.com/api/Users/GetAll").
+    this.userService.getAll<UserForListModel>("https://zenuykuapi.somee.com/api/Users/GetAll").
     subscribe(response=>{
       let form:UserForListModel[]=Object.assign(this.users,response.data)
       this.dataSource=new MatTableDataSource<UserForListModel>(response.data);
