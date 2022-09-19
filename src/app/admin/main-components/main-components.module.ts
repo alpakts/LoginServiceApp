@@ -6,6 +6,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { UserComponent } from './user/user.component';
 import { MatFormFieldModule} from '@angular/material/form-field';
 import { UpdateUserComponent } from './user/update-user/update-user.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptor } from 'src/app/interceptors/auth.interceptor';
 
 
 
@@ -18,6 +20,7 @@ import { UpdateUserComponent } from './user/update-user/update-user.component';
     MatFormFieldModule,
     DashboardModule,
     UserModule
-  ],exports:[DashboardComponent,UserComponent,UpdateUserComponent]
+  ],exports:[DashboardComponent,UserComponent,UpdateUserComponent],
+  providers: [{provide:HTTP_INTERCEPTORS, useClass:AuthInterceptor, multi:true}],
 })
 export class MainComponentsModule { }

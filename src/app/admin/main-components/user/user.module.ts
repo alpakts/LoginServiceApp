@@ -12,6 +12,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSelectModule} from '@angular/material/select';
 import {MatTableModule} from '@angular/material/table';
 import { UpdateUserComponent } from './update-user/update-user.component';
+import { AuthInterceptor } from 'src/app/interceptors/auth.interceptor';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
 @NgModule({
   declarations: [
     UserComponent,
@@ -29,7 +31,8 @@ import { UpdateUserComponent } from './update-user/update-user.component';
     MatTableModule,
     MatDialogModule,
     RouterModule.forChild([{path:"",component:UserComponent},{path:"updateUser",component:UpdateUserComponent}])
-  ],exports:[UserComponent,AddUserComponent,UpdateUserComponent]
+  ],exports:[UserComponent,AddUserComponent,UpdateUserComponent],
+  providers: [{provide:HTTP_INTERCEPTORS, useClass:AuthInterceptor, multi:true}],
   
 })
 
