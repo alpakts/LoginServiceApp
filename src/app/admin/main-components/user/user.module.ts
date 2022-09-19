@@ -29,7 +29,8 @@ import { UpdateUserComponent } from './update-user/update-user.component';
     MatSelectModule,
     MatTableModule,
     MatDialogModule,
-    RouterModule.forChild([{path:"",component:UserComponent},{path:"updateUser",component:UpdateUserComponent}])
+    RouterModule.forChild([{path:"",component:UserComponent}]),
+    
   ],exports:[UserComponent,AddUserComponent,UpdateUserComponent],
   
   

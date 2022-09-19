@@ -77,7 +77,7 @@ export class UserComponent implements OnInit ,AfterViewInit
     localStorage.setItem("surname",surname);
     localStorage.setItem("email",email);
     localStorage.setItem("role",role);
-    this.router.navigateByUrl("updateUser").then(()=>{
+    this.router.navigate(["admin/updateuser"]).then(()=>{
       console.log(id)
     })
   
