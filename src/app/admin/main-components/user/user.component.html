@@ -33,11 +33,11 @@
           </ng-container>
           <ng-container matColumnDef="createDate">
             <th mat-header-cell *matHeaderCellDef> Oluşturma Tarihi </th>
-            <td mat-cell *matCellDef="let element"> {{element.createDate}} </td>
+            <td mat-cell *matCellDef="let element"> {{element.createDate| date}} </td>
           </ng-container>
           <ng-container matColumnDef="updateDate">
             <th mat-header-cell *matHeaderCellDef> Son Güncelleme </th>
-            <td mat-cell *matCellDef="let element"> {{element.updateDate}} </td>
+            <td mat-cell *matCellDef="let element"> {{element.updateDate | date}} </td>
           </ng-container>
           <ng-container matColumnDef="deleted">
             <th mat-header-cell *matHeaderCellDef> Silindi </th>
