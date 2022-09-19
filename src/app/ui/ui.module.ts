@@ -4,6 +4,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ToastrModule } from 'ngx-toastr';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms"
+import { RouterModule } from '@angular/router';
 
 
 
@@ -16,6 +17,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms"
     CommonModule,
     ToastrModule,
     FormsModule,
+    RouterModule,
     ReactiveFormsModule,
   
     

@@ -2,34 +2,34 @@
 
 <div class="container">
 	<div class="screen">
-		<div class="screen__content">
-			<form class="login">
+		<div class="screen__content" >
+			<form class="login" [formGroup]="registerform" >
                 <div class="login__field ">
 					<img src="https://www.zenuyku.com/wp-content/uploads/2021/11/1.png"   width="200px" height="100px" alt="" role="link">
 				</div>
 				<div class="login__field">
 					<i class="login__icon fas fa-user"></i>
-					<input type="email" class="login__input" placeholder="Email">
+					<input type="email" class="login__input form-control" formControlName="email" placeholder="Email">
 				</div>
                 <div class="login__field">
 					<i class="login__icon fas fa-user"></i>
-					<input type="text" class="login__input" placeholder="Ad">
+					<input type="text" class="login__input form-control" formControlName="firstName" placeholder="Ad">
 				</div>
                 <div class="login__field">
 					<i class="login__icon fas fa-user"></i>
-					<input type="text" class="login__input" placeholder="Soyad">
+					<input type="text" class="login__input form-control" formControlName="lastName" placeholder="Soyad">
 				</div>
 				<div class="login__field">
 					<i class="login__icon fas fa-lock"></i>
-					<input type="password" class="login__input" placeholder="Şifre">
+					<input type="password" class="login__input form-control" formControlName="password" placeholder="Şifre">
 				</div>
-				<button class="button login__submit">
+				<button class="button login__submit" (click)="Register()">
 					<span class="button__text">Kayıt Oluştur</span>
 					<i class="button__icon fas fa-chevron-right"></i>
 				</button>				
 			</form>
-            <div class="social-login">
-				<h3 s>Zaten Hesabım var <Span><a href="/login">Kayıt Ol</a></Span></h3>
+            <div class="social-login" >
+				<h3  s>Zaten Hesabım var <Span><a routerLink="login">Kayıt Ol</a></Span></h3>
 				
 			</div>
 			

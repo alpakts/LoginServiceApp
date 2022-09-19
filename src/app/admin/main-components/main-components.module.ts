@@ -4,16 +4,20 @@ import { DashboardModule } from './dashboard/dashboard.module';
 import { UserModule } from './user/user.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UserComponent } from './user/user.component';
-import {matFormFieldAnimations, MatFormFieldModule} from '@angular/material/form-field';
+import { MatFormFieldModule} from '@angular/material/form-field';
+import { UpdateUserComponent } from './user/update-user/update-user.component';
+
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    
+  ],
   imports: [
     CommonModule,
     MatFormFieldModule,
     DashboardModule,
     UserModule
-  ],exports:[DashboardComponent,UserComponent]
+  ],exports:[DashboardComponent,UserComponent,UpdateUserComponent]
 })
 export class MainComponentsModule { }

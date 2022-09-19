@@ -33,7 +33,7 @@ export class AddUserComponent implements OnInit {
       this.spinner.hide("a1");
       this.toastr.success("kullanıcı eklendi","kullanıcı başarıyla eklendi");
     },(error:HttpErrorResponse)=>{
-      this.toastr.error(error.message,"Hata")
+      this.toastr.error(error.name,"Hata")
       this.spinner.hide("a1")
     })
     
