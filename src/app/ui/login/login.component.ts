@@ -41,8 +41,8 @@ export class LoginComponent implements OnInit {
           this.router.navigate(["admin"]).then(()=>{
             this.toastrService.success("Admin Girişi Başarılı","Başarılı")
           })
-        }else{  
-          console.log("asdasd")
+        }else{   
+          console.log("asdasd") 
           
           
           
