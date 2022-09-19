@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
       console.log(this.loginForm.value);
       let loginModel = Object.assign({},this.loginForm.value)
 
-      this.Service.login(loginModel,"https://localhost:5001/api/Auth/login").subscribe(response=>{
+      this.Service.login(loginModel,"https://www.zenuykuapi.somee.com/api/Auth/login").subscribe(response=>{
         this.toastrService.info(response.message)
         localStorage.setItem("token",response.data.token)
         

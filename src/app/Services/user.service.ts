@@ -14,7 +14,7 @@ export class UserService {
 
   constructor(private httpService:HttpClient) { }
   createUser(user:CreateUserModel):Observable<CreateUserModel>{
-    return this.httpService.post<CreateUserModel>("http://zenuykuapi.somee.com/api/Auth/registerbyadmin",user)
+    return this.httpService.post<CreateUserModel>("https://zenuykuapi.somee.com/api/Auth/registerbyadmin",user)
   }
   getAll<T>(apiurl:string):Observable<ListResponseModel<T>>{
     return this.httpService.get<ListResponseModel<T>>(apiurl)
@@ -23,9 +23,9 @@ export class UserService {
     return  this.httpService.post<ResponseModel>(`${apiurl}?userId=${id}`,null)
   }
   UpdateUser(user:CreateUserModel):Observable<CreateUserModel>{
-    return this.httpService.post<CreateUserModel>("http://zenuykuapi.somee.com/api/Users/update",user)
+    return this.httpService.post<CreateUserModel>("https://zenuykuapi.somee.com/api/Users/update",user)
   }
   Register(user:RegisterModel):Observable<TokenModel>{
-    return this.httpService.post<TokenModel>("http://zenuykuapi.somee.com/api/Auth/register",user)
+    return this.httpService.post<TokenModel>("https://zenuykuapi.somee.com/api/Auth/register",user)
   }
 }

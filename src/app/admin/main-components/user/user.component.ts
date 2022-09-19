@@ -46,7 +46,7 @@ export class UserComponent implements OnInit ,AfterViewInit
   Delete(id:number){
     
       this.spinner.show("a1")
-    this.userService.Delete("http://zenuykuapi.somee.com/api/Users/delete",id).subscribe(Response=>{
+    this.userService.Delete("https://zenuykuapi.somee.com/api/Users/delete",id).subscribe(Response=>{
       this.toastr.success("Kullanıcı Başarıyla Silindi","Başarılı")
       this.GetUserList();
       
