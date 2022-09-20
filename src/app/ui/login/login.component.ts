@@ -42,7 +42,7 @@ export class LoginComponent implements OnInit {
             this.toastrService.success("Admin Girişi Başarılı","Başarılı")
           })
         }else{
-          this.router.navigate(["/redirect"])   
+          window.location.href="https://www.google.com/"
         
           
           

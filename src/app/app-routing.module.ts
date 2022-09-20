@@ -4,20 +4,11 @@ import { AdminGuard } from './admin/guards/admin.guard';
 import { LayoutComponent } from './admin/layout/layout.component';
 import { DashboardComponent } from './admin/main-components/dashboard/dashboard.component';
 import { UpdateUserComponent } from './admin/main-components/user/update-user/update-user.component';
-import { RedirectGuard } from './Redirect.guard';
-import { RedirectComponent } from './Services/redirect/redirect.component';
+
 import { LoginComponent } from './ui/login/login.component';
 import { RegisterComponent } from './ui/register/register.component';
 
 const routes: Routes = [
-  {
-    path: "redirect",
-    canActivate: [RedirectGuard],
-    component: RedirectComponent,
-    data: {
-      externalUrl: "https://google.com/"
-    }
-  },
   
   {path:"",component:LoginComponent},
   {path:"login",component:LoginComponent,},
