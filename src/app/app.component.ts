@@ -10,6 +10,7 @@ export class AppComponent implements OnInit {
   title = 'LoginServiceApp';
   constructor(private spinner:NgxSpinnerService){}
   ngOnInit(): void {
+    
     this.spinner.show("a1");
     setTimeout(() => {
       this.spinner.hide("a1")

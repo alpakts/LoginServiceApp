@@ -9,10 +9,13 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations"
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdminModule } from './admin/admin.module';
 import { NgxSpinnerModule } from "ngx-spinner";
+import { RedirectComponent } from './Services/redirect/redirect.component';
+import { RedirectGuard } from './Redirect.guard';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RedirectComponent
   ],
   imports: [
     HttpClientModule,
@@ -31,7 +34,7 @@ import { NgxSpinnerModule } from "ngx-spinner";
     
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA],
-  providers:[],
+  providers: [RedirectGuard],
   bootstrap: [AppComponent],
   
 })
